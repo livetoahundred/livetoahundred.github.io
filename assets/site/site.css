@@ -30,3 +30,17 @@
 .l2a-signup button { flex: 1 0 160px; height: 58px; padding: 0 26px; border: 0; border-radius: 0; background: #15171e; color: #ffffff; font: inherit; font-size: 16px; font-weight: 800; cursor: pointer; }
 .l2a-signup p { margin: 12px 0 0; font-size: 15px; line-height: 1.5; }
 .l2a-signup a { color: #15171e; }
+
+/* Fixes to the design's hero headline (landing.css comes from the canvas).
+   Each line clips its own rise animation; give the clip room for descenders
+   such as the y in "yaramaz", and draw the lines above the highlighted one
+   so its yellow band does not cover those descenders. */
+.lp-line { position: relative; padding: .2em 0; margin: -.2em 0; }
+.lp-line:nth-child(1) { z-index: 3; }
+.lp-line:nth-child(2) { z-index: 2; }
+.lp-line:nth-child(3) { z-index: 1; }
+/* When the highlighted line wraps (English on a phone), each wrapped piece
+   gets its own band; keep the bands to the letters so a lower band does not
+   paint over the line above it. */
+.lp-line:has(.lp-mark) > span { line-height: 1.16; }
+.lp-mark { background-size: 100% 76%; background-position: 0 58%; }

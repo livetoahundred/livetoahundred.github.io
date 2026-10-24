@@ -1,94 +1,74 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Terms of Service · livetoahundred</title>
-<meta name="description" content="Terms for livetoahundred's content, website and publishing app.">
-<meta name="color-scheme" content="light dark">
+<title>Kullanım Koşulları · livetoahundred</title>
+<meta name="description" content="livetoahundred içerikleri, internet sitesi ve yayın uygulaması için koşullar.">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/site/l2a-tokens.css">
+<link rel="stylesheet" href="../assets/site/bundle.css">
+<link rel="stylesheet" href="../assets/site/landing.css">
+<link rel="stylesheet" href="../assets/site/site.css">
+<style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<style>x-dc{display:none!important}</style>
+<style data-dc-tpl="1">
+body{margin:0}
+</style>
+<style data-dc-tpl="1">
+body{margin:0}
+</style>
+<style data-dc-tpl="1">
+body{margin:0}
+</style>
 </head>
-<body>
-<header class="site">
-  <div class="inner">
-    <a class="brand" href="../"><img src="../assets/logo-192.png" alt="" width="44" height="44"><span>livetoahundred</span></a>
-    <nav aria-label="Site"><a href="../newsletter/">Bülten</a> <a href="../privacy/">Privacy</a> <a href="../data-deletion/">Data deletion</a> <a href="../terms/" aria-current="page">Terms</a></nav>
-  </div>
-</header>
-<main>
-<p class="lang"><a href="#en">English</a> · <a href="#tr">Türkçe</a></p>
-
-<article id="en" lang="en">
-<h1>Terms of Service</h1>
-<p class="updated">Last updated 15 October 2026</p>
-
-<h2 id="about">1. What livetoahundred is</h2>
-<p>livetoahundred publishes short summaries of health, training, nutrition and longevity research and news, in Turkish. It publishes on Instagram, Facebook, LinkedIn, TikTok and YouTube. These terms cover our posts, this website and our publishing app.</p>
-
-<h2 id="medical">2. Not medical advice</h2>
-<p>Our posts summarise scientific studies and news for general information. They do not replace medical advice, diagnosis or treatment. Talk to your doctor before making decisions about your health. In an emergency, call 112, or your local emergency number.</p>
-
-<h2 id="accuracy">3. Accuracy and sources</h2>
-<p>We try to report each study accurately, but a short summary always leaves things out, and we can make mistakes. Every post describes its source, and most also name or link it so you can read the original. If you cannot find it, write to us and we will send you the reference. If you find an error, write to <a href="mailto:info.live2a100@gmail.com">info.live2a100@gmail.com</a> and we will correct it.</p>
-
-<h2 id="content">4. Our content and others' work</h2>
-<p>The studies and articles we summarise belong to their authors and publishers. We describe them in each post, and name or link them in most posts. The text and images of our posts belong to livetoahundred. You are welcome to share our posts with the platforms' own share features. Do not republish them as your own. For any other use, ask us first.</p>
-
-<h2 id="app">5. Our publishing app</h2>
-<p>Our app, <b>livetoa100</b> (Instagram: <b>livetoa100-IG</b>), is a private tool. It publishes only to accounts owned by livetoahundred, and it is not offered to anyone else. It follows the terms of each platform it uses, including Meta's Platform Terms and LinkedIn's API Terms of Use. How it handles data is described in our <a href="../privacy/">Privacy Policy</a>.</p>
-
-<h2 id="links">6. Links to other websites</h2>
-<p>Our posts and this website link to studies, news sites and platforms that we do not control. We are not responsible for their content or their privacy practices.</p>
-
-<h2 id="liability">7. Liability</h2>
-<p>We provide our posts and this website free of charge and as they are. Where the law allows, we are not liable for decisions you make based on them. Nothing in these terms limits liability that the law does not allow to be limited.</p>
-
-<h2 id="changes">8. Changes and applicable law</h2>
-<p>We may update these terms. When we do, we change the date at the top. These terms are governed by the laws of the Republic of Türkiye. If the English and Turkish versions differ, the Turkish one applies.</p>
-
-<h2 id="contact">9. Contact</h2>
-<p><a href="mailto:info.live2a100@gmail.com">info.live2a100@gmail.com</a></p>
-</article>
-
-<article id="tr" lang="tr">
-<h1>Kullanım Koşulları</h1>
-<p class="updated">Son güncelleme: 15 Ekim 2026</p>
-
-<h2 id="tr-about">1. livetoahundred nedir</h2>
-<p>livetoahundred, sağlık, antrenman, beslenme ve uzun yaşam üzerine araştırma ve haberlerin kısa Türkçe özetlerini yayımlar. Instagram, Facebook, LinkedIn, TikTok ve YouTube'da paylaşım yapar. Bu koşullar paylaşımlarımızı, bu internet sitesini ve yayın uygulamamızı kapsar.</p>
-
-<h2 id="tr-medical">2. Tıbbi tavsiye değildir</h2>
-<p>Paylaşımlarımız, genel bilgilendirme amacıyla bilimsel çalışmaları ve haberleri özetler. Tıbbi tavsiye, teşhis veya tedavi yerine geçmez. Sağlığınızla ilgili kararlar için hekiminize danışın. Acil durumda 112'yi arayın.</p>
-
-<h2 id="tr-accuracy">3. Doğruluk ve kaynaklar</h2>
-<p>Her çalışmayı doğru aktarmaya çalışırız. Ancak kısa bir özet her zaman bazı ayrıntıları dışarıda bırakır ve hata yapabiliriz. Her paylaşım kaynağını tanıtır; çoğu, aslını okuyabilmeniz için kaynağın adını ya da bağlantısını da verir. Bulamazsanız bize yazın, kaynağı gönderelim. Bir hata görürseniz <a href="mailto:info.live2a100@gmail.com">info.live2a100@gmail.com</a> adresine yazın, düzeltelim.</p>
-
-<h2 id="tr-content">4. İçeriğimiz ve başkalarının emeği</h2>
-<p>Özetlediğimiz çalışma ve makaleler yazarlarına ve yayıncılarına aittir. Onları her paylaşımda tanıtır, çoğunda adlarını ya da bağlantılarını veririz. Paylaşımlarımızın metin ve görselleri livetoahundred'a aittir. Paylaşımlarımızı platformların kendi paylaşma özellikleriyle paylaşabilirsiniz. Kendi içeriğiniz gibi yeniden yayımlamayın. Başka her türlü kullanım için önce bize sorun.</p>
-
-<h2 id="tr-app">5. Yayın uygulamamız</h2>
-<p>Uygulamamız <b>livetoa100</b> (Instagram: <b>livetoa100-IG</b>) bize özel bir araçtır. Yalnızca livetoahundred'a ait hesaplarda yayın yapar ve başkalarının kullanımına sunulmaz. Başta Meta Platform Koşulları ve LinkedIn API Kullanım Koşulları olmak üzere, kullandığı her platformun koşullarına uyar. Verileri nasıl işlediği <a href="../privacy/#tr">Gizlilik Politikamızda</a> açıklanır.</p>
-
-<h2 id="tr-links">6. Başka sitelere bağlantılar</h2>
-<p>Paylaşımlarımız ve bu site, kontrolümüzde olmayan çalışmalara, haber sitelerine ve platformlara bağlantı verir. Onların içeriğinden ve gizlilik uygulamalarından sorumlu değiliz.</p>
-
-<h2 id="tr-liability">7. Sorumluluk</h2>
-<p>Paylaşımlarımızı ve bu siteyi ücretsiz ve olduğu gibi sunarız. Kanunun izin verdiği ölçüde, bunlara dayanarak verdiğiniz kararlardan sorumlu değiliz. Bu koşullar, kanunun sınırlanmasına izin vermediği bir sorumluluğu sınırlamaz.</p>
-
-<h2 id="tr-changes">8. Değişiklikler ve uygulanacak hukuk</h2>
-<p>Bu koşulları güncelleyebiliriz. Güncellediğimizde en üstteki tarihi değiştiririz. Bu koşullara Türkiye Cumhuriyeti kanunları uygulanır. İngilizce ve Türkçe metinler arasında fark olursa Türkçe metin geçerlidir.</p>
-
-<h2 id="tr-contact">9. İletişim</h2>
-<p><a href="mailto:info.live2a100@gmail.com">info.live2a100@gmail.com</a></p>
-</article>
-</main>
-<footer>
-  <div class="inner">
-    <p>livetoahundred · <a href="mailto:info.live2a100@gmail.com">info.live2a100@gmail.com</a> · <a href="https://www.instagram.com/livetoahundred/">Instagram</a></p>
-    <p>Last updated 15 October 2026 · Son güncelleme 15 Ekim 2026</p>
-  </div>
-</footer>
+<body style="margin:0; background:#15171e">
+<div id="dc-root"><div class="sc-host" data-sc-name="Kosullar"><div lang="tr" style="min-height: 100vh; background: rgb(255, 255, 255); font-family: var(--font-text, 'Archivo', sans-serif);"><div class="sc-host" data-sc-name="SiteHeader"><header class="lp-dark" style="background: rgb(21, 23, 30); border-bottom: 1px solid rgba(255, 255, 255, 0.12); font-family: var(--font-text, 'Archivo', sans-serif);"><div style="width: 100%; max-width: 1240px; margin: 0px auto; box-sizing: border-box; padding: 10px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 24px;"><a class="lp-logo" href="../" style="display: inline-flex; align-items: center; text-decoration: none;"><img class="lp-badge" src="../assets/site/b4aba5469fd27f1ff24beb4c48ca603b.png" alt="livetoahundred ana sayfa" width="56" height="56" style="width: 56px; height: 56px;"></a><nav class="lp-nav" aria-label="Sayfalar"><ul style="margin: 0px; padding: 0px; list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 0px 24px;"><li><a href="../newsletter/" style="display: inline-block; padding: 14px 0px; color: rgb(255, 255, 255); font-size: 15px; line-height: 1.2; font-weight: 700; text-decoration: none;">Bülten</a></li><li><a href="../privacy/" style="display: inline-block; padding: 14px 0px; color: rgb(255, 255, 255); font-size: 15px; line-height: 1.2; font-weight: 700; text-decoration: none;">Gizlilik</a></li><li><a href="../terms/" aria-current="page" style="display: inline-block; padding: 14px 0px; color: rgb(255, 255, 255); font-size: 15px; line-height: 1.2; font-weight: 700; text-decoration: none;">Kullanım koşulları</a></li><li><a href="../data-deletion/" style="display: inline-block; padding: 14px 0px; color: rgb(255, 255, 255); font-size: 15px; line-height: 1.2; font-weight: 700; text-decoration: none;">Veri silme</a></li></ul></nav></div></header></div><main><section aria-labelledby="sayfa-basligi" style="position: relative; overflow: clip; background: rgb(21, 23, 30); color: rgb(255, 255, 255);"><div class="lp-sun" aria-hidden="true"></div><div style="position: relative; width: 100%; max-width: 1240px; margin: 0px auto; box-sizing: border-box; padding: 112px 20px 88px;"><div class="lp-title" style="display: flex; flex-direction: column; gap: 24px;"><h1 id="sayfa-basligi" class="lp-fade" style="margin: 0px; font-family: var(--font-display, 'Oswald', sans-serif); font-size: clamp(52px, 6.4vw, 104px); line-height: 1.02; font-weight: 600; letter-spacing: 0.5px; color: rgb(255, 255, 255);">Kullanım Koşulları</h1><p class="lp-fade" style="margin: 0px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 15px; line-height: 1.5; color: rgb(201, 206, 214); animation-delay: 0.15s;">Son güncelleme: 15 Ekim 2026 · <a href="../en/terms/" hreflang="en" lang="en" style="color: #ffffff;">English</a></p></div></div></section><div class="lp-doc" style="width: 100%; max-width: 1240px; margin: 0px auto; box-sizing: border-box; padding: 64px 20px 120px;"><nav aria-label="İçindekiler" style="padding-bottom: 56px;"><ol style="margin: 0px; padding: 0px; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); column-gap: 32px; border-top: 2px solid rgb(18, 38, 63);"><li style="border-bottom: 1px solid rgb(220, 215, 198);"><a href="#tr-about" style="display: block; padding: 12px 0px; font-size: 16px; line-height: 1.4; font-weight: 700; color: rgb(18, 38, 63); text-decoration: none;">1. livetoahundred nedir</a></li><li style="border-bottom: 1px solid rgb(220, 215, 198);"><a href="#tr-medical" style="display: block; padding: 12px 0px; font-size: 16px; line-height: 1.4; font-weight: 700; color: rgb(18, 38, 63); text-decoration: none;">2. Tıbbi tavsiye değildir</a></li><li style="border-bottom: 1px solid rgb(220, 215, 198);"><a href="#tr-accuracy" style="display: block; padding: 12px 0px; font-size: 16px; line-height: 1.4; font-weight: 700; color: rgb(18, 38, 63); text-decoration: none;">3. Doğruluk ve kaynaklar</a></li><li style="border-bottom: 1px solid rgb(220, 215, 198);"><a href="#tr-content" style="display: block; padding: 12px 0px; font-size: 16px; line-height: 1.4; font-weight: 700; color: rgb(18, 38, 63); text-decoration: none;">4. İçeriğimiz ve başkalarının emeği</a></li><li style="border-bottom: 1px solid rgb(220, 215, 198);"><a href="#tr-app" style="display: block; padding: 12px 0px; font-size: 16px; line-height: 1.4; font-weight: 700; color: rgb(18, 38, 63); text-decoration: none;">5. Yayın uygulamamız</a></li><li style="border-bottom: 1px solid rgb(220, 215, 198);"><a href="#tr-links" style="display: block; padding: 12px 0px; font-size: 16px; line-height: 1.4; font-weight: 700; color: rgb(18, 38, 63); text-decoration: none;">6. Başka sitelere bağlantılar</a></li><li style="border-bottom: 1px solid rgb(220, 215, 198);"><a href="#tr-liability" style="display: block; padding: 12px 0px; font-size: 16px; line-height: 1.4; font-weight: 700; color: rgb(18, 38, 63); text-decoration: none;">7. Sorumluluk</a></li><li style="border-bottom: 1px solid rgb(220, 215, 198);"><a href="#tr-changes" style="display: block; padding: 12px 0px; font-size: 16px; line-height: 1.4; font-weight: 700; color: rgb(18, 38, 63); text-decoration: none;">8. Değişiklikler ve uygulanacak hukuk</a></li><li style="border-bottom: 1px solid rgb(220, 215, 198);"><a href="#tr-contact" style="display: block; padding: 12px 0px; font-size: 16px; line-height: 1.4; font-weight: 700; color: rgb(18, 38, 63); text-decoration: none;">9. İletişim</a></li></ol></nav><section aria-labelledby="tr-about" style="display: flex; flex-wrap: wrap; gap: 16px 64px; padding: 40px 0px; border-top: 1px solid rgb(220, 215, 198);"><h2 id="tr-about" style="flex: 1 1 260px; max-width: 360px; margin: 0px; font-family: var(--font-display, 'Oswald', sans-serif); font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 600; letter-spacing: 0.3px; color: rgb(18, 38, 63);">1. livetoahundred nedir</h2><div style="flex: 999 1 560px; min-width: 0px; max-width: 760px; display: flex; flex-direction: column; gap: 18px; font-size: 18px; line-height: 1.65; color: rgb(51, 60, 69);"><p style="margin: 0px;">livetoahundred, sağlık, antrenman, beslenme ve uzun yaşam üzerine araştırma ve haberlerin kısa Türkçe özetlerini yayımlar. Instagram, Facebook, LinkedIn, TikTok ve YouTube'da paylaşım yapar. Bu koşullar paylaşımlarımızı, bu internet sitesini ve yayın uygulamamızı kapsar.</p></div></section><section aria-labelledby="tr-medical" style="display: flex; flex-wrap: wrap; gap: 16px 64px; padding: 40px 0px; border-top: 1px solid rgb(220, 215, 198);"><h2 id="tr-medical" style="flex: 1 1 260px; max-width: 360px; margin: 0px; font-family: var(--font-display, 'Oswald', sans-serif); font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 600; letter-spacing: 0.3px; color: rgb(18, 38, 63);">2. Tıbbi tavsiye değildir</h2><div style="flex: 999 1 560px; min-width: 0px; max-width: 760px; display: flex; flex-direction: column; gap: 18px; font-size: 18px; line-height: 1.65; color: rgb(51, 60, 69);"><p style="margin: 0px;">Paylaşımlarımız, genel bilgilendirme amacıyla bilimsel çalışmaları ve haberleri özetler. Tıbbi tavsiye, teşhis veya tedavi yerine geçmez. Sağlığınızla ilgili kararlar için hekiminize danışın. Acil durumda 112'yi arayın.</p></div></section><section aria-labelledby="tr-accuracy" style="display: flex; flex-wrap: wrap; gap: 16px 64px; padding: 40px 0px; border-top: 1px solid rgb(220, 215, 198);"><h2 id="tr-accuracy" style="flex: 1 1 260px; max-width: 360px; margin: 0px; font-family: var(--font-display, 'Oswald', sans-serif); font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 600; letter-spacing: 0.3px; color: rgb(18, 38, 63);">3. Doğruluk ve kaynaklar</h2><div style="flex: 999 1 560px; min-width: 0px; max-width: 760px; display: flex; flex-direction: column; gap: 18px; font-size: 18px; line-height: 1.65; color: rgb(51, 60, 69);"><p style="margin: 0px;">Her çalışmayı doğru aktarmaya çalışırız. Ancak kısa bir özet her zaman bazı ayrıntıları dışarıda bırakır ve hata yapabiliriz. Her paylaşım kaynağını tanıtır; çoğu, aslını okuyabilmeniz için kaynağın adını ya da bağlantısını da verir. Bulamazsanız bize yazın, kaynağı gönderelim. Bir hata görürseniz <a href="mailto:info.live2a100@gmail.com">info.live2a100@gmail.com</a> adresine yazın, düzeltelim.</p></div></section><section aria-labelledby="tr-content" style="display: flex; flex-wrap: wrap; gap: 16px 64px; padding: 40px 0px; border-top: 1px solid rgb(220, 215, 198);"><h2 id="tr-content" style="flex: 1 1 260px; max-width: 360px; margin: 0px; font-family: var(--font-display, 'Oswald', sans-serif); font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 600; letter-spacing: 0.3px; color: rgb(18, 38, 63);">4. İçeriğimiz ve başkalarının emeği</h2><div style="flex: 999 1 560px; min-width: 0px; max-width: 760px; display: flex; flex-direction: column; gap: 18px; font-size: 18px; line-height: 1.65; color: rgb(51, 60, 69);"><p style="margin: 0px;">Özetlediğimiz çalışma ve makaleler yazarlarına ve yayıncılarına aittir. Onları her paylaşımda tanıtır, çoğunda adlarını ya da bağlantılarını veririz. Paylaşımlarımızın metin ve görselleri livetoahundred'a aittir. Paylaşımlarımızı platformların kendi paylaşma özellikleriyle paylaşabilirsiniz. Kendi içeriğiniz gibi yeniden yayımlamayın. Başka her türlü kullanım için önce bize sorun.</p></div></section><section aria-labelledby="tr-app" style="display: flex; flex-wrap: wrap; gap: 16px 64px; padding: 40px 0px; border-top: 1px solid rgb(220, 215, 198);"><h2 id="tr-app" style="flex: 1 1 260px; max-width: 360px; margin: 0px; font-family: var(--font-display, 'Oswald', sans-serif); font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 600; letter-spacing: 0.3px; color: rgb(18, 38, 63);">5. Yayın uygulamamız</h2><div style="flex: 999 1 560px; min-width: 0px; max-width: 760px; display: flex; flex-direction: column; gap: 18px; font-size: 18px; line-height: 1.65; color: rgb(51, 60, 69);"><p style="margin: 0px;">Uygulamamız <b>livetoa100</b> (Instagram: <b>livetoa100-IG</b>) bize özel bir araçtır. Yalnızca livetoahundred'a ait hesaplarda yayın yapar ve başkalarının kullanımına sunulmaz. Başta Meta Platform Koşulları ve LinkedIn API Kullanım Koşulları olmak üzere, kullandığı her platformun koşullarına uyar. Verileri nasıl işlediği <a href="../privacy/">Gizlilik Politikamızda</a> açıklanır.</p></div></section><section aria-labelledby="tr-links" style="display: flex; flex-wrap: wrap; gap: 16px 64px; padding: 40px 0px; border-top: 1px solid rgb(220, 215, 198);"><h2 id="tr-links" style="flex: 1 1 260px; max-width: 360px; margin: 0px; font-family: var(--font-display, 'Oswald', sans-serif); font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 600; letter-spacing: 0.3px; color: rgb(18, 38, 63);">6. Başka sitelere bağlantılar</h2><div style="flex: 999 1 560px; min-width: 0px; max-width: 760px; display: flex; flex-direction: column; gap: 18px; font-size: 18px; line-height: 1.65; color: rgb(51, 60, 69);"><p style="margin: 0px;">Paylaşımlarımız ve bu site, kontrolümüzde olmayan çalışmalara, haber sitelerine ve platformlara bağlantı verir. Onların içeriğinden ve gizlilik uygulamalarından sorumlu değiliz.</p></div></section><section aria-labelledby="tr-liability" style="display: flex; flex-wrap: wrap; gap: 16px 64px; padding: 40px 0px; border-top: 1px solid rgb(220, 215, 198);"><h2 id="tr-liability" style="flex: 1 1 260px; max-width: 360px; margin: 0px; font-family: var(--font-display, 'Oswald', sans-serif); font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 600; letter-spacing: 0.3px; color: rgb(18, 38, 63);">7. Sorumluluk</h2><div style="flex: 999 1 560px; min-width: 0px; max-width: 760px; display: flex; flex-direction: column; gap: 18px; font-size: 18px; line-height: 1.65; color: rgb(51, 60, 69);"><p style="margin: 0px;">Paylaşımlarımızı ve bu siteyi ücretsiz ve olduğu gibi sunarız. Kanunun izin verdiği ölçüde, bunlara dayanarak verdiğiniz kararlardan sorumlu değiliz. Bu koşullar, kanunun sınırlanmasına izin vermediği bir sorumluluğu sınırlamaz.</p></div></section><section aria-labelledby="tr-changes" style="display: flex; flex-wrap: wrap; gap: 16px 64px; padding: 40px 0px; border-top: 1px solid rgb(220, 215, 198);"><h2 id="tr-changes" style="flex: 1 1 260px; max-width: 360px; margin: 0px; font-family: var(--font-display, 'Oswald', sans-serif); font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 600; letter-spacing: 0.3px; color: rgb(18, 38, 63);">8. Değişiklikler ve uygulanacak hukuk</h2><div style="flex: 999 1 560px; min-width: 0px; max-width: 760px; display: flex; flex-direction: column; gap: 18px; font-size: 18px; line-height: 1.65; color: rgb(51, 60, 69);"><p style="margin: 0px;">Bu koşulları güncelleyebiliriz. Güncellediğimizde en üstteki tarihi değiştiririz. Bu koşullara Türkiye Cumhuriyeti kanunları uygulanır. İngilizce ve Türkçe metinler arasında fark olursa Türkçe metin geçerlidir.</p></div></section><section aria-labelledby="tr-contact" style="display: flex; flex-wrap: wrap; gap: 16px 64px; padding: 40px 0px; border-top: 1px solid rgb(220, 215, 198); border-bottom: 1px solid rgb(220, 215, 198);"><h2 id="tr-contact" style="flex: 1 1 260px; max-width: 360px; margin: 0px; font-family: var(--font-display, 'Oswald', sans-serif); font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 600; letter-spacing: 0.3px; color: rgb(18, 38, 63);">9. İletişim</h2><div style="flex: 999 1 560px; min-width: 0px; max-width: 760px; display: flex; flex-direction: column; gap: 18px; font-size: 18px; line-height: 1.65; color: rgb(51, 60, 69);"><p style="margin: 0px;"><a href="mailto:info.live2a100@gmail.com">info.live2a100@gmail.com</a></p></div></section></div></main><div class="sc-host" data-sc-name="SiteFooter"><footer class="lp-dark" style="background: rgb(21, 23, 30); color: rgb(255, 255, 255); overflow: clip; font-family: var(--font-text, 'Archivo', sans-serif);"><div lang="tr" style="width: 100%; max-width: 1240px; margin: 0px auto; box-sizing: border-box; padding: 72px 20px 36px; display: flex; flex-direction: column; gap: 48px;"><div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px 64px;"><p style="flex: 999 1 320px; min-width: 0px; max-width: 480px; margin: 0px; font-size: 20px; line-height: 1.5; color: rgb(201, 206, 214);">Her gün yeni bir araştırma, Instagram ve TikTok’ta kart kart.</p><nav aria-label="Takip et" style="flex: 1 1 200px; min-width: 0px; display: flex; flex-direction: column; gap: 10px;"><p style="margin: 0px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 13px; line-height: 1.4; letter-spacing: 0.08em; color: rgb(154, 163, 174);">TAKİP ET</p><ul style="margin: 0px; padding: 0px; list-style: none; display: flex; flex-direction: column; font-size: 16px; line-height: 1.5; font-weight: 700;"><li><a href="https://www.instagram.com/livetoahundred/" style="display: inline-block; padding: 6px 0px; color: rgb(255, 255, 255);">Instagram @livetoahundred</a></li><li><a href="https://www.tiktok.com/@livetoahundred" style="display: inline-block; padding: 6px 0px; color: rgb(255, 255, 255);">TikTok @livetoahundred</a></li><li><a href="mailto:info.live2a100@gmail.com" style="display: inline-block; padding: 6px 0px; color: rgb(255, 255, 255);">info.live2a100@gmail.com</a></li></ul></nav><nav aria-label="Sayfalar" style="flex: 1 1 200px; min-width: 0px; display: flex; flex-direction: column; gap: 10px;"><p style="margin: 0px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 13px; line-height: 1.4; letter-spacing: 0.08em; color: rgb(154, 163, 174);">SAYFALAR</p><ul style="margin: 0px; padding: 0px; list-style: none; display: flex; flex-direction: column; font-size: 16px; line-height: 1.5; font-weight: 700;"><li><a href="../newsletter/" style="display: inline-block; padding: 6px 0px; color: rgb(255, 255, 255);">Bülten</a></li><li><a href="../privacy/" style="display: inline-block; padding: 6px 0px; color: rgb(255, 255, 255);">Gizlilik</a></li><li><a href="../terms/" aria-current="page" style="display: inline-block; padding: 6px 0px; color: rgb(255, 255, 255);">Kullanım koşulları</a></li><li><a href="../data-deletion/" style="display: inline-block; padding: 6px 0px; color: rgb(255, 255, 255);">Veri silme</a></li></ul></nav></div><div class="lp-pulse" style="line-height: 1;"><div class="sc-host-x" style="display: contents;"><span class="wordmark l2a-wordmark l2a-wordmark--white" role="img" aria-label="livetoahundred." style="font-size: clamp(40px, 11vw, 160px);"><span aria-hidden="true">live</span><span class="l2a-wordmark__to" aria-hidden="true">to</span><span aria-hidden="true">ahundred</span><span class="l2a-wordmark__dot" aria-hidden="true"></span></span></div></div><div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.18); font-size: 14px; line-height: 1.5; color: rgb(154, 163, 174);"><p style="margin: 0px;">Eğitim amaçlıdır; tıbbi tavsiye değildir.</p><p style="margin: 0px;">© 2026 livetoahundred.</p></div></div></footer></div></div></div></div>
 </body>
 </html>

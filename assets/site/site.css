@@ -1,0 +1,32 @@
+/* Pages the design does not draw itself (English legal text, newsletter
+   issues, signup confirmations) are set inside the design's page frame. */
+.l2a-prose { max-width: 820px; font-size: 18px; line-height: 1.65; color: #333c45; }
+.l2a-prose h2 { margin: 48px 0 12px; padding-top: 32px; border-top: 1px solid #dcd7c6; font-family: var(--font-display, 'Oswald', sans-serif); font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 600; letter-spacing: 0.3px; color: #12263f; }
+.l2a-prose h2:first-child { margin-top: 0; }
+.l2a-prose h3 { margin: 28px 0 8px; font-size: 19px; color: #12263f; }
+.l2a-prose p, .l2a-prose ul, .l2a-prose ol { margin: 0 0 16px; }
+.l2a-prose li { margin: 0 0 8px; }
+.l2a-prose a { color: #12263f; text-underline-offset: 2px; }
+.l2a-prose img { max-width: 100%; height: auto; }
+.l2a-prose .table-wrap { overflow-x: auto; margin: 0 0 20px; }
+.l2a-prose table { border-collapse: collapse; width: 100%; font-size: 16px; }
+.l2a-prose th, .l2a-prose td { text-align: left; vertical-align: top; padding: 10px 12px; border: 1px solid #dcd7c6; }
+.l2a-prose th { background: #f4ecdf; color: #12263f; }
+.l2a-prose .note { background: #f4ecdf; padding: 18px 22px; margin: 0 0 24px; }
+.l2a-prose .note p:last-child { margin-bottom: 0; }
+.l2a-prose code { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: .88em; }
+.lp-dark a { color: inherit; }
+
+.l2a-issues { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.l2a-issues a { display: block; padding: 22px 28px; background: #f4ecdf; color: #12263f; text-decoration: none; }
+.l2a-issues a:hover { background: #f2d272; }
+.l2a-issues strong { display: block; font-family: var(--font-display, 'Oswald', sans-serif); font-size: 26px; line-height: 1.2; font-weight: 600; }
+.l2a-issues span { display: block; margin-top: 6px; font-size: 16px; line-height: 1.5; color: #333c45; }
+
+.l2a-signup { max-width: 900px; box-sizing: border-box; padding: 28px 32px; background: #f2d272; color: #15171e; }
+.l2a-signup label { display: block; margin: 0 0 12px; font-family: var(--font-display, 'Oswald', sans-serif); font-size: 28px; font-weight: 600; }
+.l2a-signup .row { display: flex; flex-wrap: wrap; gap: 8px; }
+.l2a-signup input { flex: 999 1 240px; min-width: 0; height: 58px; box-sizing: border-box; padding: 0 18px; border: 1px solid #15171e; border-radius: 0; background: #ffffff; color: #15171e; font: inherit; font-size: 17px; }
+.l2a-signup button { flex: 1 0 160px; height: 58px; padding: 0 26px; border: 0; border-radius: 0; background: #15171e; color: #ffffff; font: inherit; font-size: 16px; font-weight: 800; cursor: pointer; }
+.l2a-signup p { margin: 12px 0 0; font-size: 15px; line-height: 1.5; }
+.l2a-signup a { color: #15171e; }

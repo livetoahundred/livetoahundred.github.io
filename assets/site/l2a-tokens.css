@@ -1,7 +1,4 @@
-/* Live to a Hundred — compiled from design/claude-design/live-to-a-hundred/tokens.json (the design system at version 7) for the landing page: colour themes (one per pillar), spacing, sizes, type styles and the three font faces, read from templates/assets/fonts. */
-@font-face { font-family: 'Oswald'; src: url('../fonts/Oswald.woff2') format('woff2'); font-weight: 200 700; font-style: normal; font-display: block; }
-@font-face { font-family: 'Archivo'; src: url('../fonts/Archivo.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: block; }
-@font-face { font-family: 'JetBrains Mono'; src: url('../fonts/JetBrainsMono.woff2') format('woff2'); font-weight: 100 800; font-style: normal; font-display: block; }
+/* Live to a Hundred — compiled from ds/l2a/tokens.json for this canvas: colour themes (one per pillar), spacing, radius, sizes, type styles and the three font files. */
 :root, [data-theme="antrenman"] {
   --logo-navy: #12263f;
   --logo-white: #ffffff;
@@ -314,20 +311,143 @@
   --font-text: "Archivo", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 }
-.cover-headline { font-family: var(--font-display); font-size: 90px; line-height: 1.14; font-weight: 600; letter-spacing: 0.3px; }
-.cover-pillar { font-family: var(--font-text); font-size: 25px; line-height: 1.088; font-weight: 800; letter-spacing: 3px; }
-.cover-page { font-family: var(--font-mono); font-size: 23px; line-height: 1.32; font-weight: 500; letter-spacing: 1px; }
-.kapak-headline { font-family: var(--font-display); font-size: 72px; line-height: 1.14; font-weight: 600; letter-spacing: 0.5px; }
-.kapak-summary { font-family: var(--font-text); font-size: 45px; line-height: 1.5; font-weight: 400; }
-.chip-label { font-family: var(--font-text); font-size: 35px; line-height: 1.088; font-weight: 700; letter-spacing: 1.5px; }
-.chip-value { font-family: var(--font-display); font-size: 46px; line-height: 1.482; font-weight: 600; }
-.pillar-name { font-family: var(--font-text); font-size: 35px; line-height: 1.088; font-weight: 800; letter-spacing: 3px; }
-.page-number { font-family: var(--font-text); font-size: 60px; line-height: 1.088; font-weight: 600; }
-.detail-subtitle { font-family: var(--font-text); font-size: 35px; line-height: 1.088; font-weight: 500; }
-.footer-cta { font-family: var(--font-text); font-size: 35px; line-height: 1.088; font-weight: 700; }
-.wordmark { font-family: var(--font-text); font-size: 42px; line-height: 1.088; font-weight: 900; letter-spacing: -0.06em; }
-.section-label { font-family: var(--font-text); font-size: 42px; line-height: 1.088; font-weight: 800; letter-spacing: 2.5px; }
-.section-body { font-family: var(--font-text); font-size: 42px; line-height: 1.42; font-weight: 400; }
-.source-label { font-family: var(--font-text); font-size: 35px; line-height: 1.088; font-weight: 800; letter-spacing: 2.5px; }
-.source-line { font-family: var(--font-mono); font-size: 35px; line-height: 1.4; font-weight: 400; }
-.video-subtitle { font-family: var(--font-display); font-size: 104px; line-height: 1.12; font-weight: 600; }
+.cover-headline {
+  font-family: var(--font-display);
+  font-size: 90px;
+  line-height: 1.14;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.cover-pillar {
+  font-family: var(--font-text);
+  font-size: 25px;
+  line-height: 1.088;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+.cover-page {
+  font-family: var(--font-mono);
+  font-size: 23px;
+  line-height: 1.32;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.kapak-headline {
+  font-family: var(--font-display);
+  font-size: 72px;
+  line-height: 1.14;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.kapak-summary {
+  font-family: var(--font-text);
+  font-size: 45px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.chip-label {
+  font-family: var(--font-text);
+  font-size: 35px;
+  line-height: 1.088;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.chip-value {
+  font-family: var(--font-display);
+  font-size: 46px;
+  line-height: 1.482;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.pillar-name {
+  font-family: var(--font-text);
+  font-size: 35px;
+  line-height: 1.088;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+.page-number {
+  font-family: var(--font-text);
+  font-size: 60px;
+  line-height: 1.088;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.detail-subtitle {
+  font-family: var(--font-text);
+  font-size: 35px;
+  line-height: 1.088;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.footer-cta {
+  font-family: var(--font-text);
+  font-size: 35px;
+  line-height: 1.088;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.wordmark {
+  font-family: var(--font-text);
+  font-size: 42px;
+  line-height: 1.088;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+}
+.section-label {
+  font-family: var(--font-text);
+  font-size: 42px;
+  line-height: 1.088;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+.section-body {
+  font-family: var(--font-text);
+  font-size: 42px;
+  line-height: 1.42;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.source-label {
+  font-family: var(--font-text);
+  font-size: 35px;
+  line-height: 1.088;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+.source-line {
+  font-family: var(--font-mono);
+  font-size: 35px;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.video-subtitle {
+  font-family: var(--font-display);
+  font-size: 104px;
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/Oswald.woff2") format("woff2");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("../fonts/Archivo.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/JetBrainsMono.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}

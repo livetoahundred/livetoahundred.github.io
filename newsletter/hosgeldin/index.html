@@ -1,34 +1,77 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aboneliğin başladı · livetoahundred</title>
-<meta name="description" content="livetoahundred bülten aboneliğin onaylandı.">
-<meta name="color-scheme" content="light dark">
+<meta name="description" content="Teşekkürler. Yeni bir sayı çıktığında e-postana gelecek.">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
 <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
-<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="../../assets/site/l2a-tokens.css">
+<link rel="stylesheet" href="../../assets/site/bundle.css">
+<link rel="stylesheet" href="../../assets/site/landing.css">
+<link rel="stylesheet" href="../../assets/site/site.css">
+<style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<style>x-dc{display:none!important}</style>
+<style data-dc-tpl="1">
+body{margin:0}
+</style>
+<style data-dc-tpl="1">
+body{margin:0}
+</style>
+<style data-dc-tpl="1">
+body{margin:0}
+</style>
 </head>
-<body>
-<header class="site">
-  <div class="inner">
-    <a class="brand" href="../../"><img src="../../assets/logo-192.png" alt="" width="44" height="44"><span>livetoahundred</span></a>
-    <nav aria-label="Site"><a href="../../newsletter/" aria-current="page">Bülten</a> <a href="../../privacy/">Privacy</a> <a href="../../data-deletion/">Data deletion</a> <a href="../../terms/">Terms</a></nav>
-  </div>
-</header>
-<main>
-<article lang="tr">
-  <h1>Aboneliğin başladı</h1>
-  <p>Teşekkürler. Yeni bir sayı çıktığında e-postana gelecek. Her bültenin altından tek tıkla ayrılabilirsin.</p>
-  <p><a href="../">Önceki sayıları oku</a></p>
-</article>
-</main>
-<footer>
-  <div class="inner">
-    <p>livetoahundred · <a href="mailto:info.live2a100@gmail.com">info.live2a100@gmail.com</a> · <a href="https://www.instagram.com/livetoahundred/">Instagram</a></p>
-    <p>Last updated 15 October 2026 · Son güncelleme 15 Ekim 2026</p>
-  </div>
-</footer>
+<body style="margin:0; background:#15171e">
+<div id="dc-root"><div class="sc-host" data-sc-name="Bulten"><div lang="tr" style="min-height: 100vh; background: rgb(255, 255, 255); font-family: var(--font-text, 'Archivo', sans-serif);"><div class="sc-host" data-sc-name="SiteHeader"><header class="lp-dark" style="background: rgb(21, 23, 30); border-bottom: 1px solid rgba(255, 255, 255, 0.12); font-family: var(--font-text, 'Archivo', sans-serif);"><div style="width: 100%; max-width: 1240px; margin: 0px auto; box-sizing: border-box; padding: 10px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 24px;"><a class="lp-logo" href="../../" style="display: inline-flex; align-items: center; text-decoration: none;"><img class="lp-badge" src="../../assets/site/b4aba5469fd27f1ff24beb4c48ca603b.png" alt="livetoahundred ana sayfa" width="56" height="56" style="width: 56px; height: 56px;"></a><nav class="lp-nav" aria-label="Sayfalar"><ul style="margin: 0px; padding: 0px; list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 0px 24px;"><li><a href="../../newsletter/" aria-current="page" style="display: inline-block; padding: 14px 0px; color: rgb(255, 255, 255); font-size: 15px; line-height: 1.2; font-weight: 700; text-decoration: none;">Bülten</a></li><li><a href="../../privacy/" style="display: inline-block; padding: 14px 0px; color: rgb(255, 255, 255); font-size: 15px; line-height: 1.2; font-weight: 700; text-decoration: none;">Gizlilik</a></li><li><a href="../../terms/" style="display: inline-block; padding: 14px 0px; color: rgb(255, 255, 255); font-size: 15px; line-height: 1.2; font-weight: 700; text-decoration: none;">Kullanım koşulları</a></li><li><a href="../../data-deletion/" style="display: inline-block; padding: 14px 0px; color: rgb(255, 255, 255); font-size: 15px; line-height: 1.2; font-weight: 700; text-decoration: none;">Veri silme</a></li></ul></nav></div></header></div><main><section aria-labelledby="sayfa-basligi" style="position: relative; overflow: clip; background: rgb(21, 23, 30); color: rgb(255, 255, 255);"><div class="lp-sun" aria-hidden="true"></div><div style="position: relative; width: 100%; max-width: 1240px; margin: 0px auto; box-sizing: border-box; padding: 112px 20px 88px;"><div class="lp-title" style="display: flex; flex-direction: column; gap: 24px;"><h1 id="sayfa-basligi" class="lp-fade" style="margin: 0px; font-family: var(--font-display, 'Oswald', sans-serif); font-size: clamp(64px, 8vw, 132px); line-height: 1; font-weight: 600; letter-spacing: 0.5px; color: rgb(255, 255, 255);">Aboneliğin başladı</h1><p class="lp-fade" style="margin: 0px; max-width: 640px; font-size: clamp(19px, 1.6vw, 24px); line-height: 1.5; color: rgb(201, 206, 214); animation-delay: 0.15s;">Teşekkürler. Yeni bir sayı çıktığında e-postana gelecek.</p></div></div></section><div class="lp-doc" style="width: 100%; max-width: 1240px; margin: 0px auto; box-sizing: border-box; padding: 64px 20px 120px; display: flex; flex-direction: column; gap: 64px;"><div class="l2a-prose">
+<p>Her bültenin altından tek tıkla ayrılabilirsin.</p>
+<p><a href="../">Önceki sayıları oku</a></p>
+</div></div></main><div class="sc-host" data-sc-name="SiteFooter"><footer class="lp-dark" style="background: rgb(21, 23, 30); color: rgb(255, 255, 255); overflow: clip; font-family: var(--font-text, 'Archivo', sans-serif);"><div lang="tr" style="width: 100%; max-width: 1240px; margin: 0px auto; box-sizing: border-box; padding: 72px 20px 36px; display: flex; flex-direction: column; gap: 48px;"><div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px 64px;"><p style="flex: 999 1 320px; min-width: 0px; max-width: 480px; margin: 0px; font-size: 20px; line-height: 1.5; color: rgb(201, 206, 214);">Her gün yeni bir araştırma, Instagram ve TikTok’ta kart kart.</p><nav aria-label="Takip et" style="flex: 1 1 200px; min-width: 0px; display: flex; flex-direction: column; gap: 10px;"><p style="margin: 0px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 13px; line-height: 1.4; letter-spacing: 0.08em; color: rgb(154, 163, 174);">TAKİP ET</p><ul style="margin: 0px; padding: 0px; list-style: none; display: flex; flex-direction: column; font-size: 16px; line-height: 1.5; font-weight: 700;"><li><a href="https://www.instagram.com/livetoahundred/" style="display: inline-block; padding: 6px 0px; color: rgb(255, 255, 255);">Instagram @livetoahundred</a></li><li><a href="https://www.tiktok.com/@livetoahundred" style="display: inline-block; padding: 6px 0px; color: rgb(255, 255, 255);">TikTok @livetoahundred</a></li><li><a href="mailto:info.live2a100@gmail.com" style="display: inline-block; padding: 6px 0px; color: rgb(255, 255, 255);">info.live2a100@gmail.com</a></li></ul></nav><nav aria-label="Sayfalar" style="flex: 1 1 200px; min-width: 0px; display: flex; flex-direction: column; gap: 10px;"><p style="margin: 0px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 13px; line-height: 1.4; letter-spacing: 0.08em; color: rgb(154, 163, 174);">SAYFALAR</p><ul style="margin: 0px; padding: 0px; list-style: none; display: flex; flex-direction: column; font-size: 16px; line-height: 1.5; font-weight: 700;"><li><a href="../../newsletter/" style="display: inline-block; padding: 6px 0px; color: rgb(255, 255, 255);">Bülten</a></li><li><a href="../../privacy/" style="display: inline-block; padding: 6px 0px; color: rgb(255, 255, 255);">Gizlilik</a></li><li><a href="../../terms/" style="display: inline-block; padding: 6px 0px; color: rgb(255, 255, 255);">Kullanım koşulları</a></li><li><a href="../../data-deletion/" style="display: inline-block; padding: 6px 0px; color: rgb(255, 255, 255);">Veri silme</a></li></ul></nav></div><div class="lp-pulse" style="line-height: 1;"><div class="sc-host-x" style="display: contents;"><span class="wordmark l2a-wordmark l2a-wordmark--white" role="img" aria-label="livetoahundred." style="font-size: clamp(40px, 11vw, 160px);"><span aria-hidden="true">live</span><span class="l2a-wordmark__to" aria-hidden="true">to</span><span aria-hidden="true">ahundred</span><span class="l2a-wordmark__dot" aria-hidden="true"></span></span></div></div><div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.18); font-size: 14px; line-height: 1.5; color: rgb(154, 163, 174);"><p style="margin: 0px;">Eğitim amaçlıdır; tıbbi tavsiye değildir.</p><p style="margin: 0px;">© 2026 livetoahundred.</p></div></div></footer></div></div></div></div>
 </body>
 </html>

@@ -1,0 +1,333 @@
+/* Live to a Hundred — compiled from design/claude-design/live-to-a-hundred/tokens.json (the design system at version 7) for the landing page: colour themes (one per pillar), spacing, sizes, type styles and the three font faces, read from templates/assets/fonts. */
+@font-face { font-family: 'Oswald'; src: url('../fonts/Oswald.woff2') format('woff2'); font-weight: 200 700; font-style: normal; font-display: block; }
+@font-face { font-family: 'Archivo'; src: url('../fonts/Archivo.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: block; }
+@font-face { font-family: 'JetBrains Mono'; src: url('../fonts/JetBrainsMono.woff2') format('woff2'); font-weight: 100 800; font-style: normal; font-display: block; }
+:root, [data-theme="antrenman"] {
+  --logo-navy: #12263f;
+  --logo-white: #ffffff;
+  --logo-dot: #fdc130;
+  --logo-dot-ochre: #a67b29;
+  --beyaz: #f3efe3;
+  --mavi: #327ea9;
+  --sari: #f2d272;
+  --lacivert: #1b385a;
+  --saf-beyaz: #ffffff;
+  --antrasit: #333c45;
+  --gri: #aab2ba;
+  --nane: #a9dcc3;
+  --hardal: #cb9a17;
+  --ink: #15171e;
+  --hair: #dcd7c6;
+  --cover-paper: #f4ecdf;
+  --cover-ink: var(--logo-navy);
+  --cover-pillar: #8c631b;
+  --cover-page: rgba(18, 38, 63, 0.65);
+  --cover-dot-off: rgba(18, 38, 63, 0.25);
+  --kapak-bg: var(--saf-beyaz);
+  --kapak-fg: #15171e;
+  --kapak-name: #333c45;
+  --kapak-muted: #6b6a63;
+  --kapak-body: #35342e;
+  --kapak-hair: var(--hair);
+  --kapak-accent: #cb9a17;
+  --kapak-highlight: var(--sari);
+  --kapak-cta: #333c45;
+  --kapak-icon: #333c45;
+  --kapak-watermark: rgba(51,60,69,0.07);
+  --kapak-logo: var(--logo-navy);
+  --kapak-logo-dot: var(--logo-dot);
+  --chip-bg: #333c45;
+  --chip-label: #cfd4d9;
+  --chip-value: #ffffff;
+  --chip-alt-bg: #cb9a17;
+  --chip-alt-label: #4a3607;
+  --chip-alt-value: #15171e;
+  --detay-bg: var(--antrasit);
+  --detay-fg: var(--logo-white);
+  --detay-name: #ffffff;
+  --detay-label: var(--sari);
+  --detay-body: #e8ebee;
+  --detay-muted: #cfd4d9;
+  --detay-hair: rgba(255,255,255,0.35);
+  --detay-icon: #f2d272;
+  --detay-watermark: rgba(255,255,255,0.08);
+  --detay-logo: var(--logo-white);
+  --box-bg: rgba(255,255,255,0.12);
+  --box-mono: #dfe3e7;
+  --box-rule: var(--sari);
+  --illo-yellow: #fec940;
+  --illo-tomato: #fc5533;
+  --illo-cobalt: #285fa3;
+  --illo-pink: #fdc2c6;
+  --illo-cream: #f5e5ca;
+  --illo-forest: #1e453d;
+  --illo-ink: #242526;
+  --video-subtitle-ink: var(--illo-ink);
+  --video-subtitle-accent: #e8452c;
+  --video-subtitle-halo: #f7eee1;
+  --video-label-text: #fff8ec;
+  --video-closing-paper: var(--cover-paper);
+  --video-disclosure: #12263feb;
+}
+[data-theme="beslenme"] {
+  --cover-ink: var(--logo-navy);
+  --cover-pillar: #285c77;
+  --kapak-bg: var(--mavi);
+  --kapak-fg: #ffffff;
+  --kapak-name: #ffffff;
+  --kapak-muted: #cfe3ee;
+  --kapak-body: #eaf3f8;
+  --kapak-hair: rgba(255,255,255,0.35);
+  --kapak-accent: #f2d272;
+  --kapak-highlight: var(--sari);
+  --kapak-cta: #f2d272;
+  --kapak-icon: #f2d272;
+  --kapak-watermark: rgba(255,255,255,0.10);
+  --kapak-logo: var(--logo-white);
+  --kapak-logo-dot: var(--logo-dot);
+  --chip-bg: rgba(255,255,255,0.16);
+  --chip-label: #cfe3ee;
+  --chip-value: #f2d272;
+  --chip-alt-bg: var(--chip-bg);
+  --chip-alt-label: var(--chip-label);
+  --chip-alt-value: var(--chip-value);
+  --detay-bg: var(--beyaz);
+  --detay-fg: var(--ink);
+  --detay-name: #2e7196;
+  --detay-label: #2e7196;
+  --detay-body: #35342e;
+  --detay-muted: #6b6a63;
+  --detay-hair: var(--hair);
+  --detay-icon: #2e7196;
+  --detay-watermark: rgba(46,113,150,0.10);
+  --detay-logo: var(--logo-navy);
+  --box-bg: #ffffff;
+  --box-mono: #5c5a52;
+  --box-rule: var(--hardal);
+  --video-subtitle-ink: var(--illo-ink);
+  --video-closing-paper: var(--cover-paper);
+}
+[data-theme="toparlanma"] {
+  --cover-ink: var(--logo-navy);
+  --cover-pillar: #295d51;
+  --kapak-bg: var(--lacivert);
+  --kapak-fg: #ffffff;
+  --kapak-name: #ffffff;
+  --kapak-muted: #a8bed6;
+  --kapak-body: #d9e3ef;
+  --kapak-hair: rgba(255,255,255,0.30);
+  --kapak-accent: #f2d272;
+  --kapak-highlight: var(--sari);
+  --kapak-cta: #f2d272;
+  --kapak-icon: #f2d272;
+  --kapak-watermark: rgba(242,210,114,0.09);
+  --kapak-logo: var(--logo-white);
+  --kapak-logo-dot: var(--logo-dot);
+  --chip-bg: rgba(255,255,255,0.10);
+  --chip-label: #a8bed6;
+  --chip-value: #f2d272;
+  --chip-alt-bg: var(--chip-bg);
+  --chip-alt-label: var(--chip-label);
+  --chip-alt-value: var(--chip-value);
+  --detay-bg: var(--beyaz);
+  --detay-fg: var(--ink);
+  --detay-name: #1b385a;
+  --detay-label: #1b385a;
+  --detay-body: #35342e;
+  --detay-muted: #6b6a63;
+  --detay-hair: var(--hair);
+  --detay-icon: #1b385a;
+  --detay-watermark: rgba(27,56,90,0.09);
+  --detay-logo: var(--logo-navy);
+  --box-bg: #ffffff;
+  --box-mono: #5c5a52;
+  --box-rule: var(--hardal);
+  --video-subtitle-ink: var(--illo-ink);
+  --video-closing-paper: var(--cover-paper);
+}
+[data-theme="haber"] {
+  --cover-ink: var(--logo-navy);
+  --cover-pillar: #725141;
+  --kapak-bg: var(--gri);
+  --kapak-fg: #12263f;
+  --kapak-name: #12263f;
+  --kapak-muted: #2f3a45;
+  --kapak-body: #14314f;
+  --kapak-hair: rgba(18,38,63,0.28);
+  --kapak-accent: #12263f;
+  --kapak-highlight: var(--sari);
+  --kapak-cta: #12263f;
+  --kapak-icon: #f2d272;
+  --kapak-watermark: rgba(18,38,63,0.10);
+  --kapak-logo: var(--logo-navy);
+  --kapak-logo-dot: var(--logo-dot);
+  --chip-bg: #f2d272;
+  --chip-label: #4a3607;
+  --chip-value: #12263f;
+  --chip-alt-bg: var(--chip-bg);
+  --chip-alt-label: var(--chip-label);
+  --chip-alt-value: var(--chip-value);
+  --detay-bg: var(--beyaz);
+  --detay-fg: var(--ink);
+  --detay-name: #5b6670;
+  --detay-label: #5b6670;
+  --detay-body: #35342e;
+  --detay-muted: #6b6a63;
+  --detay-hair: var(--hair);
+  --detay-icon: #5b6670;
+  --detay-watermark: rgba(91,102,112,0.11);
+  --detay-logo: var(--logo-navy);
+  --box-bg: #ffffff;
+  --box-mono: #5c5a52;
+  --box-rule: var(--hardal);
+  --video-subtitle-ink: var(--illo-ink);
+  --video-closing-paper: var(--cover-paper);
+}
+[data-theme="psikoloji"] {
+  --cover-ink: var(--logo-navy);
+  --cover-pillar: #9e4b40;
+  --kapak-bg: var(--sari);
+  --kapak-fg: #15171e;
+  --kapak-name: #15171e;
+  --kapak-muted: #5c440a;
+  --kapak-body: #2e2a10;
+  --kapak-hair: rgba(21,23,30,0.30);
+  --kapak-accent: #2a7fb0;
+  --kapak-highlight: var(--sari);
+  --kapak-cta: #2a7fb0;
+  --kapak-icon: #15171e;
+  --kapak-watermark: rgba(21,23,30,0.10);
+  --kapak-logo: var(--logo-navy);
+  --kapak-logo-dot: var(--logo-dot-ochre);
+  --chip-bg: rgba(21,23,30,0.10);
+  --chip-label: #5c440a;
+  --chip-value: #2a7fb0;
+  --chip-alt-bg: var(--chip-bg);
+  --chip-alt-label: var(--chip-label);
+  --chip-alt-value: var(--chip-value);
+  --detay-bg: var(--beyaz);
+  --detay-fg: var(--ink);
+  --detay-name: #a87c10;
+  --detay-label: #a87c10;
+  --detay-body: #35342e;
+  --detay-muted: #6b6a63;
+  --detay-hair: var(--hair);
+  --detay-icon: #a87c10;
+  --detay-watermark: rgba(203,154,23,0.14);
+  --detay-logo: var(--logo-navy);
+  --box-bg: #ffffff;
+  --box-mono: #5c5a52;
+  --box-rule: var(--hardal);
+  --video-subtitle-ink: var(--illo-ink);
+  --video-closing-paper: var(--cover-paper);
+}
+[data-theme="blog"] {
+  --cover-ink: var(--logo-navy);
+  --cover-pillar: #327158;
+  --kapak-bg: var(--nane);
+  --kapak-fg: #12263f;
+  --kapak-name: #12263f;
+  --kapak-muted: #1b4463;
+  --kapak-body: #14314f;
+  --kapak-hair: rgba(18,38,63,0.28);
+  --kapak-accent: #2a7fb0;
+  --kapak-highlight: var(--sari);
+  --kapak-cta: #12263f;
+  --kapak-icon: #12263f;
+  --kapak-watermark: rgba(18,38,63,0.10);
+  --kapak-logo: var(--logo-navy);
+  --kapak-logo-dot: var(--logo-dot);
+  --chip-bg: #f2d272;
+  --chip-label: #4a3607;
+  --chip-value: #12263f;
+  --chip-alt-bg: var(--chip-bg);
+  --chip-alt-label: var(--chip-label);
+  --chip-alt-value: var(--chip-value);
+  --detay-bg: var(--beyaz);
+  --detay-fg: var(--ink);
+  --detay-name: #2a6e4a;
+  --detay-label: #2a6e4a;
+  --detay-body: #35342e;
+  --detay-muted: #6b6a63;
+  --detay-hair: var(--hair);
+  --detay-icon: #2a6e4a;
+  --detay-watermark: rgba(42,110,74,0.10);
+  --detay-logo: var(--logo-navy);
+  --box-bg: #ffffff;
+  --box-mono: #5c5a52;
+  --box-rule: var(--hardal);
+  --video-subtitle-ink: var(--illo-ink);
+  --video-closing-paper: var(--cover-paper);
+}
+:root {
+  --space-slide-x: 64px;
+  --space-header-y: 24px;
+  --space-header-gap: 24px;
+  --space-subtitle: 6px;
+  --space-content-top: 8px;
+  --space-section-y: 18px;
+  --space-label: 8px;
+  --space-box-y: 16px;
+  --space-box-x: 24px;
+  --space-box-lines: 10px;
+  --space-footer-gap: 16px;
+  --space-footer-top: 16px;
+  --space-footer-bottom: 26px;
+  --space-kapak-header-y: 40px;
+  --space-headline: 28px;
+  --space-kapak-gap: 44px;
+  --space-chip-gap: 14px;
+  --space-chip-y: 26px;
+  --space-chip-x: 30px;
+  --space-chip-value: 10px;
+  --space-kapak-footer-top: 28px;
+  --space-kapak-footer-bottom: 40px;
+  --space-accent-x: 14px;
+  --space-cover-x: 72px;
+  --space-cover-top: 64px;
+  --space-cover-headline-top: 132px;
+  --space-cover-headline-y: 24px;
+  --space-cover-nav: 20px;
+  --space-cover-marks: 7px;
+  --space-cover-headline: 60px;
+  --space-cover-bottom: 35px;
+  --radius-none: 0px;
+  --radius-dot: 50%;
+  --radius-mark: 3px;
+  --slide-width: 1080px;
+  --slide-height: 1350px;
+  --icon-width: 103px;
+  --icon-height: 84px;
+  --summary-width: 920px;
+  --hairline: 1px;
+  --box-rule-width: 6px;
+  --watermark-size: 560px;
+  --cover-headline-height: 452px;
+  --cover-footer-height: 112px;
+  --cover-mark-width: 18px;
+  --cover-mark-height: 5px;
+  --cover-dot-size: 5px;
+  --cover-arrow-width: 64px;
+  --cover-arrow-height: 54px;
+  --cover-arrow-stroke: 4px;
+  --font-display: "Oswald", sans-serif;
+  --font-text: "Archivo", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+.cover-headline { font-family: var(--font-display); font-size: 90px; line-height: 1.14; font-weight: 600; letter-spacing: 0.3px; }
+.cover-pillar { font-family: var(--font-text); font-size: 25px; line-height: 1.088; font-weight: 800; letter-spacing: 3px; }
+.cover-page { font-family: var(--font-mono); font-size: 23px; line-height: 1.32; font-weight: 500; letter-spacing: 1px; }
+.kapak-headline { font-family: var(--font-display); font-size: 72px; line-height: 1.14; font-weight: 600; letter-spacing: 0.5px; }
+.kapak-summary { font-family: var(--font-text); font-size: 45px; line-height: 1.5; font-weight: 400; }
+.chip-label { font-family: var(--font-text); font-size: 35px; line-height: 1.088; font-weight: 700; letter-spacing: 1.5px; }
+.chip-value { font-family: var(--font-display); font-size: 46px; line-height: 1.482; font-weight: 600; }
+.pillar-name { font-family: var(--font-text); font-size: 35px; line-height: 1.088; font-weight: 800; letter-spacing: 3px; }
+.page-number { font-family: var(--font-text); font-size: 60px; line-height: 1.088; font-weight: 600; }
+.detail-subtitle { font-family: var(--font-text); font-size: 35px; line-height: 1.088; font-weight: 500; }
+.footer-cta { font-family: var(--font-text); font-size: 35px; line-height: 1.088; font-weight: 700; }
+.wordmark { font-family: var(--font-text); font-size: 42px; line-height: 1.088; font-weight: 900; letter-spacing: -0.06em; }
+.section-label { font-family: var(--font-text); font-size: 42px; line-height: 1.088; font-weight: 800; letter-spacing: 2.5px; }
+.section-body { font-family: var(--font-text); font-size: 42px; line-height: 1.42; font-weight: 400; }
+.source-label { font-family: var(--font-text); font-size: 35px; line-height: 1.088; font-weight: 800; letter-spacing: 2.5px; }
+.source-line { font-family: var(--font-mono); font-size: 35px; line-height: 1.4; font-weight: 400; }
+.video-subtitle { font-family: var(--font-display); font-size: 104px; line-height: 1.12; font-weight: 600; }

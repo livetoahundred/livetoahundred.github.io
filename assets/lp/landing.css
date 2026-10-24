@@ -1,0 +1,93 @@
+/* Live to a Hundred landing page: motion, hover states and the few layout switches
+   that inline styles can't express. Colours, type and spacing stay inline in the
+   artboards. Every animation sits behind prefers-reduced-motion: without motion the
+   page is complete and still. */
+
+/* hero card deck: --s scales the 1080 x 1350 cards */
+.lp-deck { --s: .36; }
+@media (max-width: 760px) { .lp-deck { --s: .21; } }
+
+/* header: the extra subscribe link hides on phones */
+@media (max-width: 760px) { .lp-hide-sm { display: none !important; } }
+
+/* headline lines: each line masks its own rise */
+.lp-line { display: block; overflow: hidden; padding: .07em 0; margin: -.07em 0; }
+.lp-line > span { display: inline-block; }
+
+/* the sari highlight on the hero's last line (the HABER cover's device) */
+.lp-mark {
+  color: #15171e;
+  padding: 0 .12em;
+  background-image: linear-gradient(#f2d272, #f2d272);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* buttons */
+.lp-btn { transition: background-color .25s ease, color .25s ease; }
+.lp-btn__arrow { display: inline-block; transition: transform .25s ease; }
+.lp-btn:hover .lp-btn__arrow { transform: translateX(6px); }
+.lp-btn--sari:hover { background-color: #ffffff !important; }
+.lp-btn--navy:hover { background-color: #15171e !important; }
+
+/* marquee: two identical halves, so -50% loops seamlessly */
+.lp-marquee__track { display: flex; width: max-content; }
+
+/* pillar accordion: six spines, one open; hovering opens another */
+.lp-acc { display: flex; height: 540px; }
+.lp-acc > li { flex: 1 1 0; min-width: 0; transition: flex-grow .6s cubic-bezier(.2,.7,.2,1); }
+.lp-acc > li.is-open, .lp-acc:hover > li:hover { flex-grow: 3.6; }
+.lp-acc:hover > li.is-open:not(:hover) { flex-grow: 1; }
+.lp-acc__spine { position: absolute; left: 20px; bottom: 24px; writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; transition: opacity .3s ease; }
+.lp-acc__body { position: absolute; left: 24px; right: 24px; bottom: 24px; opacity: 0; transform: translateY(16px); transition: opacity .3s ease, transform .5s cubic-bezier(.2,.7,.2,1); }
+.lp-acc > li.is-open .lp-acc__spine, .lp-acc:hover > li:hover .lp-acc__spine { opacity: 0; }
+.lp-acc > li.is-open .lp-acc__body, .lp-acc:hover > li:hover .lp-acc__body { opacity: 1; transform: none; transition-delay: .15s; }
+.lp-acc:hover > li.is-open:not(:hover) .lp-acc__spine { opacity: 1; }
+.lp-acc:hover > li.is-open:not(:hover) .lp-acc__body { opacity: 0; transform: translateY(16px); transition-delay: 0s; }
+.lp-acc__mark { transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+.lp-acc > li:hover .lp-acc__mark { transform: rotate(-14deg) scale(1.08); }
+@media (max-width: 760px) {
+  .lp-acc { flex-direction: column; height: auto; }
+  .lp-acc > li, .lp-acc > li.is-open, .lp-acc:hover > li:hover, .lp-acc:hover > li.is-open:not(:hover) { flex: none; }
+  .lp-acc__spine { display: none; }
+  .lp-acc__body,
+  .lp-acc > li .lp-acc__body,
+  .lp-acc:hover > li .lp-acc__body,
+  .lp-acc:hover > li.is-open:not(:hover) .lp-acc__body { position: relative; left: auto; right: auto; bottom: auto; margin-top: 18px; opacity: 1; transform: none; }
+}
+
+/* rules: the title steps forward on hover */
+.lp-rule__title { transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+.lp-rule:hover .lp-rule__title { transform: translateX(10px); }
+
+/* motion */
+@media (prefers-reduced-motion: no-preference) {
+  .lp-line > span { animation: lp-up 1s cubic-bezier(.2,.75,.2,1) both; }
+  .lp-mark { animation: lp-wipe .75s .9s cubic-bezier(.75,0,.2,1) both; }
+  .lp-fade { animation: lp-fade .9s cubic-bezier(.2,.75,.2,1) both; }
+  .lp-deck__in { animation: lp-deck-in 1.2s .35s cubic-bezier(.2,.75,.2,1) both; }
+  .lp-deck__card { animation: lp-shuffle 9s cubic-bezier(.65,0,.25,1) infinite; }
+  .lp-marquee__track { animation: lp-marquee 40s linear infinite; }
+  .lp-marquee:hover .lp-marquee__track { animation-play-state: paused; }
+  .lp-pulse .l2a-wordmark__dot { animation: lp-pulse 2.4s ease-in-out infinite; }
+  @supports (animation-timeline: view()) {
+    .lp-reveal { animation: lp-rise linear both; animation-timeline: view(); animation-range: entry 0% entry 80%; }
+  }
+}
+@keyframes lp-up { from { transform: translateY(108%); } to { transform: none; } }
+@keyframes lp-wipe { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
+@keyframes lp-fade { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes lp-deck-in { from { opacity: 0; transform: translateY(80px) rotate(8deg); } to { opacity: 1; transform: none; } }
+@keyframes lp-shuffle {
+  0%, 28% { transform: translate(0, 0) rotate(-4deg); z-index: 3; opacity: 1; }
+  33.3% { transform: translate(-70%, 6%) rotate(-20deg); z-index: 3; opacity: 0; }
+  33.4% { transform: translate(18%, -10%) rotate(10deg); z-index: 1; opacity: 0; }
+  40%, 61% { transform: translate(18%, -10%) rotate(10deg); z-index: 1; opacity: 1; }
+  66.7%, 94% { transform: translate(9%, -5%) rotate(3deg); z-index: 2; opacity: 1; }
+  100% { transform: translate(0, 0) rotate(-4deg); z-index: 3; opacity: 1; }
+}
+@keyframes lp-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes lp-pulse { 0%, 64%, 100% { transform: scale(1); } 74% { transform: scale(1.5); } 84% { transform: scale(.88); } }
+@keyframes lp-rise { from { opacity: 0; transform: translateY(44px); } to { opacity: 1; transform: none; } }

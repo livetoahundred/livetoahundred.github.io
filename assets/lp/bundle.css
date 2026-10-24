@@ -1,0 +1,234 @@
+/* Live to a Hundred: styles for window.L2A. Colours, spacing, sizes and type
+   come from tokens.css (type through the style classes the components carry);
+   every card sets data-theme="<pillar>", so cover-pillar, detay-*, box-* and the
+   legacy kapak-* and chip-* resolve to that pillar. Only component geometry with
+   no token lives here. */
+
+.l2a-card {
+  position: relative;
+  box-sizing: border-box;
+  width: var(--slide-width);
+  height: var(--slide-height);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-text);
+  line-height: normal;
+}
+/* the five cream detail pages (and the legacy white ANTRENMAN text cover) */
+.l2a-card--bordered { border: var(--hairline) solid var(--hair); }
+
+/* the templates leave these lines at the font's normal height, which Chromium
+   rounds per size; the style classes carry the unrounded ratio (1.088 Archivo,
+   1.482 Oswald, 1.32 JetBrains Mono), so the components restore normal */
+.l2a-text-cover__name, .l2a-text-cover__page, .l2a-text-cover__cta, .l2a-chip__label, .l2a-chip__value,
+.l2a-detail__pillar, .l2a-detail__subtitle, .l2a-detail__page, .l2a-detail__label, .l2a-detail__cta,
+.l2a-source__label, .l2a-cover__pillar, .l2a-cover__page { line-height: normal; }
+
+/* Wordmark */
+.l2a-wordmark { line-height: 1; white-space: nowrap; color: var(--logo-navy); }
+.l2a-wordmark--white { color: var(--logo-white); }
+.l2a-wordmark--inline { line-height: 0; }
+.l2a-wordmark__to { font-weight: 400; letter-spacing: -0.01em; }
+.l2a-wordmark__dot {
+  display: inline-block;
+  width: .3em;
+  height: .3em;
+  margin-left: .07em;
+  border-radius: var(--radius-dot);
+  background: var(--logo-dot);
+}
+.l2a-wordmark--ochre .l2a-wordmark__dot { background: var(--logo-dot-ochre); }
+/* the footer's left slot: a 35px strut the 42px mark is drawn into at line-height 0 */
+.l2a-footer-slot { font-size: 35px; line-height: normal; text-align: left; }
+
+/* Pillar icon */
+.l2a-pillar-icon { display: block; flex: none; }
+
+/* Source (KAYNAK) box */
+.l2a-source {
+  background: var(--box-bg);
+  border-left: var(--box-rule-width) solid var(--box-rule);
+  padding: var(--space-box-y) var(--space-box-x);
+  min-height: 0;
+  overflow: hidden;
+}
+.l2a-source--bordered {
+  border: var(--hairline) solid var(--hair);
+  border-left: var(--box-rule-width) solid var(--box-rule);
+}
+.l2a-source__label { color: var(--detay-label); }
+.l2a-source__lines { margin-top: var(--space-box-lines); color: var(--box-mono); }
+
+/* Legacy text cover (templates/kapak.html.j2 as it was at 1397e25) */
+.l2a-text-cover { background: var(--kapak-bg); color: var(--kapak-fg); }
+.l2a-text-cover strong, .l2a-text-cover b { font-weight: 800; color: var(--kapak-fg); }
+.l2a-text-cover__watermark { color: var(--kapak-watermark); }
+.l2a-text-cover__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-header-gap);
+  padding: var(--space-kapak-header-y) var(--space-slide-x);
+  border-bottom: var(--hairline) solid var(--kapak-hair);
+}
+.l2a-text-cover__icon { width: var(--icon-width); height: var(--icon-height); color: var(--kapak-icon); }
+.l2a-text-cover__name { color: var(--kapak-name); }
+.l2a-text-cover__page { margin-left: auto; color: var(--kapak-muted); }
+.l2a-text-cover__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  padding: 0 var(--space-slide-x);
+}
+.l2a-text-cover__headline {
+  margin: var(--space-headline) 0 0;
+  padding: var(--space-headline) 0;
+  display: grid;
+  min-height: 0;
+  overflow: hidden;
+  text-wrap: pretty;
+  color: var(--kapak-fg);
+}
+/* the headline is laid out twice in one grid cell: the lower copy paints only the
+   accent's background, the upper only the text, so no highlight covers a glyph */
+.l2a-hl { grid-area: 1 / 1; }
+.l2a-hl--under, .l2a-hl--under * { color: transparent !important; }
+.l2a-hl--over * { background: none !important; }
+.l2a-text-cover .l2a-accent { color: var(--kapak-accent); }
+.l2a-text-cover--highlight .l2a-accent {
+  background: var(--kapak-highlight);
+  padding: 0 var(--space-accent-x);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.l2a-text-cover--highlight .l2a-text-cover__headline { padding-right: var(--space-accent-x); }
+.l2a-text-cover__summary {
+  margin-top: auto;
+  max-width: var(--summary-width);
+  display: grid;
+  min-height: 0;
+  overflow: hidden;
+  text-wrap: pretty;
+  color: var(--kapak-body);
+}
+.l2a-text-cover--highlight .l2a-text-cover__summary { padding-right: var(--space-accent-x); }
+.l2a-chips { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-chip-gap); margin-top: var(--space-kapak-gap); }
+.l2a-chips--one { grid-template-columns: 1fr; }
+.l2a-chip { background: var(--chip-bg); padding: var(--space-chip-y) var(--space-chip-x); }
+.l2a-chip--alt { background: var(--chip-alt-bg); }
+.l2a-chip--wide { grid-column: 1 / -1; }
+.l2a-chip__label { color: var(--chip-label); }
+.l2a-chip--alt .l2a-chip__label { color: var(--chip-alt-label); }
+.l2a-chip__value { margin-top: var(--space-chip-value); color: var(--chip-value); }
+.l2a-chip--alt .l2a-chip__value { color: var(--chip-alt-value); }
+.l2a-text-cover__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: var(--space-kapak-gap);
+  padding: var(--space-kapak-footer-top) 0 var(--space-kapak-footer-bottom);
+  border-top: var(--hairline) solid var(--kapak-hair);
+}
+.l2a-text-cover__cta { color: var(--kapak-cta); text-align: right; }
+.l2a-text-cover .l2a-wordmark { color: var(--kapak-logo); }
+.l2a-text-cover .l2a-wordmark__dot { background: var(--kapak-logo-dot); }
+
+/* Detail page (templates/detay.html.j2) */
+.l2a-detail { background: var(--detay-bg); color: var(--detay-fg); }
+.l2a-detail strong, .l2a-detail b { font-weight: 800; color: var(--detay-fg); }
+.l2a-detail .l2a-accent { color: var(--detay-label); }
+.l2a-detail__watermark { color: var(--detay-watermark); }
+.l2a-detail__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-header-gap);
+  padding: var(--space-header-y) var(--space-slide-x);
+  border-bottom: var(--hairline) solid var(--detay-hair);
+}
+.l2a-detail__icon { width: var(--icon-width); height: var(--icon-height); color: var(--detay-icon); }
+.l2a-detail__pillar { color: var(--detay-name); }
+.l2a-detail__subtitle { margin-top: var(--space-subtitle); color: var(--detay-muted); }
+.l2a-detail__page { margin-left: auto; color: var(--detay-muted); }
+.l2a-detail__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  padding: var(--space-content-top) var(--space-slide-x) 0;
+}
+.l2a-detail__section {
+  padding: var(--space-section-y) 0;
+  border-bottom: var(--hairline) solid var(--detay-hair);
+  min-height: 0;
+  overflow: hidden;
+}
+.l2a-detail__section--last { border-bottom: 0; }
+.l2a-detail__label { color: var(--detay-label); }
+.l2a-detail__text { margin-top: var(--space-label); color: var(--detay-body); }
+.l2a-detail__text--solo { margin-top: 0; }
+.l2a-detail__source { margin-top: auto; }
+.l2a-detail__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: var(--space-footer-gap);
+  padding: var(--space-footer-top) 0 var(--space-footer-bottom);
+  border-top: var(--hairline) solid var(--detay-hair);
+}
+.l2a-detail__footer--auto { margin-top: auto; }
+.l2a-detail__cta { color: var(--detay-label); text-align: right; }
+.l2a-detail .l2a-wordmark { color: var(--detay-logo); }
+
+/* Cover, every pillar (templates/kapak.html.j2; render.FIT_JS sets the
+   headline's font-size). Every part is absolutely placed, as in the template. */
+.l2a-cover { display: block; background: var(--cover-paper); color: var(--cover-ink); }
+.l2a-cover strong, .l2a-cover b { font-weight: 800; color: var(--cover-ink); }
+.l2a-cover .l2a-cover__accent { color: var(--cover-ink); }
+.l2a-cover__art { position: absolute; inset: 0; }
+.l2a-cover__art img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.l2a-cover__header {
+  position: absolute;
+  top: var(--space-cover-top);
+  left: var(--space-cover-x);
+  right: var(--space-cover-x);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.l2a-cover__pillar { color: var(--cover-pillar); }
+.l2a-cover__page { color: var(--cover-page); }
+.l2a-cover__headline {
+  position: absolute;
+  top: var(--space-cover-headline-top);
+  left: var(--space-cover-x);
+  right: var(--space-cover-x);
+  height: var(--cover-headline-height);
+  margin: 0;
+  padding: var(--space-cover-headline-y) 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-wrap: pretty;
+  color: var(--cover-ink);
+}
+.l2a-cover__hl { display: block; min-width: 0; overflow-wrap: break-word; }
+.l2a-cover__footer {
+  position: absolute;
+  left: var(--space-cover-x);
+  right: var(--space-cover-x);
+  bottom: 0;
+  height: var(--cover-footer-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.l2a-cover__nav { display: flex; align-items: center; gap: var(--space-cover-nav); color: var(--cover-ink); }
+.l2a-cover__arrow { display: block; width: var(--cover-arrow-width); height: var(--cover-arrow-height); }
+.l2a-cover__arrow path { stroke-width: var(--cover-arrow-stroke); }
+.l2a-pager { display: flex; align-items: center; gap: var(--space-cover-marks); }
+.l2a-pager__on { width: var(--cover-mark-width); height: var(--cover-mark-height); border-radius: var(--radius-mark); background: currentColor; }
+.l2a-pager__off { width: var(--cover-dot-size); height: var(--cover-dot-size); border-radius: var(--radius-dot); background: var(--cover-dot-off); }

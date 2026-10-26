@@ -62,6 +62,11 @@
   .lp-acc:hover > li.is-open:not(:hover) .lp-acc__body { position: relative; left: auto; right: auto; bottom: auto; margin-top: 18px; opacity: 1; transform: none; }
 }
 
+/* latest-issue cards: the card lifts onto a navy shadow on hover */
+.lp-card { transition: transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s cubic-bezier(.2,.7,.2,1); }
+.lp-card:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 #1b385a; }
+.lp-card:hover .lp-btn__arrow { transform: translateX(6px); }
+
 /* rules: the title steps forward on hover */
 .lp-rule__title { transition: transform .45s cubic-bezier(.2,.7,.2,1); }
 .lp-rule:hover .lp-rule__title { transform: translateX(10px); }

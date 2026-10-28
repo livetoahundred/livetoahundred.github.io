@@ -1,0 +1,115 @@
+/* Live to a Hundred site: motion, hover states and the few layout switches that
+   inline styles can't express. Colours, type and spacing stay inline in the
+   artboards. Every animation sits behind prefers-reduced-motion: without motion the
+   pages are complete and still. */
+
+/* header: the extra links hide on phones */
+@media (max-width: 760px) { .lp-hide-sm { display: none !important; } }
+
+/* subpage menu: the current page is underlined in sari */
+.lp-nav a { transition: box-shadow .25s ease; }
+.lp-nav a:hover, .lp-nav a[aria-current="page"] { box-shadow: inset 0 -3px 0 #f2d272; }
+
+/* text links on dark grounds turn sari on hover */
+.lp-dark a:not(.lp-btn):hover { color: #f2d272 !important; }
+
+/* headline lines: each line masks its own rise */
+.lp-line { display: block; overflow: hidden; padding: .07em 0; margin: -.07em 0; }
+.lp-line > span { display: inline-block; }
+
+/* the sari highlight on the hero's last line (the HABER cover's device) */
+.lp-mark {
+  color: #15171e;
+  padding: 0 .12em;
+  background-image: linear-gradient(#f2d272, #f2d272);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* buttons */
+.lp-btn { transition: background-color .25s ease, color .25s ease; }
+.lp-btn__arrow { display: inline-block; transition: transform .25s ease; }
+.lp-btn:hover .lp-btn__arrow { transform: translateX(6px); }
+.lp-btn--sari:hover { background-color: #ffffff !important; }
+.lp-btn--navy:hover { background-color: #15171e !important; }
+
+/* marquee: two identical halves, so -50% loops seamlessly */
+.lp-marquee__track { display: flex; width: max-content; }
+
+/* pillar accordion: six spines, one open; hovering opens another */
+.lp-acc { display: flex; height: 540px; }
+.lp-acc > li { flex: 1 1 0; min-width: 0; transition: flex-grow .6s cubic-bezier(.2,.7,.2,1); }
+.lp-acc > li.is-open, .lp-acc:hover > li:hover { flex-grow: 3.6; }
+.lp-acc:hover > li.is-open:not(:hover) { flex-grow: 1; }
+.lp-acc__spine { position: absolute; left: 20px; bottom: 24px; writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; transition: opacity .3s ease; }
+.lp-acc__body { position: absolute; left: 24px; right: 24px; bottom: 24px; opacity: 0; transform: translateY(16px); transition: opacity .3s ease, transform .5s cubic-bezier(.2,.7,.2,1); }
+.lp-acc > li.is-open .lp-acc__spine, .lp-acc:hover > li:hover .lp-acc__spine { opacity: 0; }
+.lp-acc > li.is-open .lp-acc__body, .lp-acc:hover > li:hover .lp-acc__body { opacity: 1; transform: none; transition-delay: .15s; }
+.lp-acc:hover > li.is-open:not(:hover) .lp-acc__spine { opacity: 1; }
+.lp-acc:hover > li.is-open:not(:hover) .lp-acc__body { opacity: 0; transform: translateY(16px); transition-delay: 0s; }
+.lp-acc__mark { transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+.lp-acc > li:hover .lp-acc__mark { transform: rotate(-14deg) scale(1.08); }
+@media (max-width: 760px) {
+  .lp-acc { flex-direction: column; height: auto; }
+  .lp-acc > li, .lp-acc > li.is-open, .lp-acc:hover > li:hover, .lp-acc:hover > li.is-open:not(:hover) { flex: none; }
+  .lp-acc__spine { display: none; }
+  .lp-acc__head { flex-direction: row !important; align-items: center !important; }
+  .lp-acc__body,
+  .lp-acc > li .lp-acc__body,
+  .lp-acc:hover > li .lp-acc__body,
+  .lp-acc:hover > li.is-open:not(:hover) .lp-acc__body { position: relative; left: auto; right: auto; bottom: auto; margin-top: 18px; opacity: 1; transform: none; }
+}
+
+/* rules: the title steps forward on hover */
+.lp-rule__title { transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+.lp-rule:hover .lp-rule__title { transform: translateX(10px); }
+
+/* subpages: the big sari dot behind the title, smaller on phones; the title keeps clear of it */
+.lp-sun { position: absolute; right: -140px; top: -210px; width: 440px; height: 440px; border-radius: 50%; background: #fec940; }
+.lp-title { max-width: calc(100% - 300px); }
+@media (max-width: 760px) {
+  .lp-sun { right: -70px; top: -110px; width: 190px; height: 190px; }
+  .lp-title { max-width: none; }
+}
+
+/* subpage text: links inside the article */
+.lp-doc a { color: #12263f; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.lp-doc a:hover { color: #15171e; background: #f2d272; }
+
+/* hero picture: a cream-framed print on a sari offset shadow; it lifts off the page
+   when it arrives and again on hover. The painting drifts from around the sun. */
+.hx-img { transform-origin: 50% 40%; }
+.hx-frame:hover { transform: translate(-6px, -6px) !important; box-shadow: 22px 22px 0 #f2d272 !important; }
+
+/* motion */
+@media (prefers-reduced-motion: no-preference) {
+  .lp-line > span { animation: lp-up 1s cubic-bezier(.2,.75,.2,1) both; }
+  .lp-mark { animation: lp-wipe .75s .9s cubic-bezier(.75,0,.2,1) both; }
+  .lp-fade { animation: lp-fade .9s cubic-bezier(.2,.75,.2,1) both; }
+  .lp-marquee__track { animation: lp-marquee 40s linear infinite; }
+  .lp-marquee:hover .lp-marquee__track { animation-play-state: paused; }
+  .lp-pulse .l2a-wordmark__dot, .lp-blink { animation: lp-pulse 2.4s ease-in-out infinite; }
+  .lp-sun { animation: lp-sun-in 1.2s cubic-bezier(.2,.75,.2,1) both, hx-breathe 7s 1.2s ease-in-out infinite alternate; }
+  @supports (animation-timeline: view()) {
+    .lp-reveal { animation: lp-rise linear both; animation-timeline: view(); animation-range: entry 0% entry 80%; }
+  }
+
+  /* hero picture: the painting wipes up inside its frame, the print lifts off the
+     page, then the painting breathes slowly */
+  .hx-in { animation: hx-wipe 1.2s .25s cubic-bezier(.65,0,.25,1) both; }
+  .hx-frame { animation: hx-lift .8s 1.25s cubic-bezier(.2,.75,.2,1) backwards; transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s cubic-bezier(.2,.7,.2,1); }
+  .hx-img { animation: hx-drift 14s 1.45s ease-in-out infinite alternate; }
+}
+@keyframes lp-up { from { transform: translateY(108%); } to { transform: none; } }
+@keyframes lp-wipe { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
+@keyframes lp-fade { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes lp-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes lp-pulse { 0%, 64%, 100% { transform: scale(1); } 74% { transform: scale(1.5); } 84% { transform: scale(.88); } }
+@keyframes lp-rise { from { opacity: 0; transform: translateY(44px); } to { opacity: 1; transform: none; } }
+@keyframes lp-sun-in { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: none; } }
+@keyframes hx-wipe { from { clip-path: inset(100% 0 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes hx-lift { from { transform: translate(16px, 16px); box-shadow: 0 0 0 #f2d272; } to { transform: none; box-shadow: 16px 16px 0 #f2d272; } }
+@keyframes hx-drift { from { transform: scale(1); } to { transform: scale(1.045); } }
+@keyframes hx-breathe { from { transform: scale(1); } to { transform: scale(1.04); } }
